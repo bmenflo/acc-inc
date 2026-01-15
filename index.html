@@ -1,4 +1,5 @@
 <!doctype html>
+<!doctype html>
 <html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8">
@@ -312,7 +313,7 @@ main {
 </head>
 <body>
   <header container" role="banner">
-    <h1>BROCHURE TECNOLÓGICO</h1>
+    <h1>Brochure Tecnológico</h1>
   </header>
     <nav>
       <ul>
@@ -485,10 +486,10 @@ main {
       <h3>6. ¡Inicie la Transformación Hoy!</h3>
       <p>La inclusión no es un acto de caridad, es un acto de inteligencia empresarial. ¿Está listo para liderar el cambio digital en su sector?</p>
       <ul>
-        <li>✔️ <strong>Contacto:</strong> Ingeniero de Sistemas, Brajean Méndiz Flores.</li>
-        <li>✔️ <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/brajean-m%C3%A9ndiz-flores-5ba7b9b2/" target="_blank">Perfil de LinkedIn de Brajean Méndiz Flores</a></li>
-        <li>✔️ <strong>WhatsApp:</strong> <button onclick="enviarMensaje()">Inicia ya!</button></li>
-        <li>✔ 📧: <a href="mailto:tallerdp.appweb@gmail.com?subject=Iniciar%20proceso%20CT?body=¡Hola%20Ing.%20Brajean%20Méndiz!%20Nos%20gustaría%20iniciar%20el%20proceso%20con%20respecto%20a%20las%20Capacitaciones%20Tecnológicas.%20Estaremos%20a%20la%20espera%20de%20su%20comunicación.. 💻" target="_blank">tallerdp.appweb@gmail.com</a></li>
+        <li>✔️ Contacto: Ingeniero de Sistemas, Brajean Méndiz Flores.</li>
+        <li>✔️ LinkedIn: <a href="https://www.linkedin.com/in/brajean-m%C3%A9ndiz-flores-5ba7b9b2/" target="_blank">Perfil de LinkedIn de Brajean Méndiz Flores</a></li>
+        <li>✔️ WhatsApp: <button onclick="enviarMensaje()">Inicia ya!</button></li>
+        <li>✔ 📧: <a href="mailto:tallerdp.appweb@gmail.com?subject=Iniciar%20proceso%20CT&body=%C2%A1Hola%20Ing.%20Brajean%20M%C3%A9ndiz!%0ANos%20gustaría%20iniciar%20el%20proceso%20con%20respecto%20a%20las%20Capacitaciones%20Tecnol%C3%B3gicas.%0AEstaremos%20a%20la%20espera%20de%20su%20comunicaci%C3%B3n..%20%F0%9F%92%BB" target="_blank">tallerdp.appweb@gmail.com</a></li>
         <li>✔ 📱: <a href="tel:992891965">+51 992 891 965</a></li>
         <li>✔️ <strong>Ubicación: </strong>Chorrillos, Lima - Perú.</li>
       </ul>
@@ -512,7 +513,7 @@ main {
   })
         function enviarMensaje() {
             let numeroCelular = '51992891965';
-            let mensaje = '¡Hola Ing. Brajean Méndiz! Nos gustaría iniciar con el proceso con respecto a las Capacitaciones Tecnológicas. Estaremos a la espera de su comunicación.. 💻';
+            let mensaje = '¡Hola Ing. Brajean Méndiz!%0ANos gustaría iniciar con el proceso con respecto a las Capacitaciones Tecnológicas.%0AEstaremos a la espera de su comunicación.. 💻';
             let mensajeCodificado = encodeURIComponent(mensaje);
             let urlWhatsApp = `https://wa.me/${numeroCelular}?text=${mensajeCodificado}`;
             window.open(urlWhatsApp, '_blank');
