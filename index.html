@@ -1,5 +1,4 @@
 <!doctype html>
-<!doctype html>
 <html lang="es" dir="ltr">
 <head>
   <meta charset="utf-8">
@@ -28,6 +27,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -39,6 +42,8 @@ html, body {
 
 /* Imágenes y videos responsivos */
 img, video {
+  border: 2px solid #ffffff;
+border-radius: 5px;
   max-width: 100%;
   height: auto;
   display: block;
@@ -67,7 +72,7 @@ h3 {
   padding: 2px 0;
 }
 
-p {
+p, li {
   font-size: 1rem;              /* móvil */
   color: var(--text-white);
   margin: 8px 24px;
@@ -89,6 +94,17 @@ ul li, ol li {
 }
 
 /* Navegación: móvil primero (hamburguesa) */
+  .btn-menu-movil {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text-white);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 5px;
+  font-family: "Calibri", sans-serif;
+}
+
 nav {
   position: relative;
   margin: 20px auto;
@@ -173,7 +189,7 @@ tbody td {
 }
 
 /* Botón WhatsApp llamativo */
-button {
+#whatsapp {
   font-family: "Calibri", "Segoe UI", Arial, sans-serif;
   font-size: 1rem;
   color: var(--text-white);
@@ -185,11 +201,16 @@ button {
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-button:hover,
+#whatsapp:hover,
 button:focus {
   filter: brightness(1.05);
   outline: 2px solid rgba(255,255,255,0.35);
   outline-offset: 2px;
+}
+
+#contactanos ul li a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /* Footer: h6 centrado */
@@ -221,6 +242,10 @@ main {
   p  { font-size: 1.05rem; margin: 10px 32px; }
 
   /* Navegación horizontal en tablet */
+  .btn-menu-movil {
+    display: none;
+  }
+
   nav {
     max-width: 88%;
     padding: 12px;
@@ -310,216 +335,256 @@ main {
 }
 
   </style>
-</head>
-<body>
-  <header container" role="banner">
-    <h1>Brochure Tecnológico</h1>
-  </header>
-    <nav>
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a id="aw" href="#accesibilidad-web">Accesibilidad Web</a></li>
-        <li><a id="il" href="#inclusion-laboral">Inclusión Laboral</a></li>
-        <li><a href="#contactanos">Contáctanos</a></li>
-      </ul>
-    </nav>
-  <main>
-    <section id="accesibilidad">
-      <article>
-        <h2>Web para Todos: Consultoría Técnica y Transformación en Accesibilidad Digital</h2>
-        <figure>
-          <img src="" alt="Una captura de pantalla dividida. En un lado, código desordenado y una persona frustrada; en el otro, una interfaz limpia, un lector de pantalla activo y una persona con discapacidad navegando con éxito.">
+  <body>
+    <header>
+      <h1>Brochure Tecnológico</h1>
+    </header>
+      <nav>
+        <button id="menu-toggle" class="btn-menu-movil" aria-label="Abrir menú">
+          <span id="icono-menu">☰</span>
+        </button>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a id="aw" href="#accesibilidad-web">Accesibilidad Web</a></li>
+          <li><a id="il" href="#inclusion-laboral">Inclusión Tecnológica</a></li>
+          <li><a href="#contactanos">Contáctanos</a></li>
+        </ul>
+      </nav>
+    <main>
+      <section id="accesibilidad">
+        <article>
+          <h2>Web para Todos: Consultoría Técnica y Transformación en Accesibilidad Digital</h2>
+          <p>La Accesibilidad Web es la práctica de eliminar barreras que impiden la interacción o el acceso a sitios web por parte de personas con discapacidad. No es solo una mejora visual; es asegurar que su infraestructura digital cumpla con las pautas internacionales WCAG 2.1 y 2.2 (Web Content Accessibility Guidelines).</p>
+          <figure>
+            <img src="" alt="Una captura de pantalla dividida. En un lado, código desordenado y una persona frustrada; en el otro, una interfaz limpia, un lector de pantalla activo y una persona con discapacidad navegando con éxito.">
+          </figure>
+          <p>No es solo inclusión, es innovación técnica y cumplimiento legal. ¿Está su empresa lista para el mercado global?</p>
+        </article>
+        <article>
+          <h3>1. ¿Qué es Accesibilidad Web?</h3>
+        <p>Es la práctica de diseñar y desarrollar sitios web, herramientas y tecnologías para que las personas con discapacidad puedan usarlas.</p>
+        <ol type="A">
+          <li><strong>Desarrollo Universal Digital:</strong> Es garantizar que cualquier persona, sin importar su condición física o sensorial pueda navegar, entender e interactuar con una página web de manera autónoma.</li>
+          <li><strong>Cumplimiento de WCAG:</strong> Estas reglas aseguran que el contenido sea Percibible (que se pueda ver o escuchar), Operable (que se pueda usar solo con el teclado o voz), Comprensible (que no sea confuso) y Robusto (que funcione en cualquier dispositivo moderno).</li>
+          <li><strong>Puente Tecnológico de IA:</strong> Gracias a la Inteligencia Artificial, hoy, la IA puede generar descripciones automáticas de imágenes para personas con pérdida visual, subtitular videos en tiempo real para personas con discapacidad auditiva y simplificar textos complejos para personas con discapacidad cognitiva.</li>
+          <li><strong>Optimización para el Futuro del Negocio:</strong> No es solo para personas con discapacidad; una web accesible carga más rápido, se ve mejor en celulares y tiene un mejor posicionamiento en Google (SEO).</li>
+        </ol>
+        </article>
+        <article>
+          <h3>2. Impacto en el Negocio y Beneficios</h3>
+          <ul>
+            <li>✔️ <strong>AAumento de Tráfico y Mercado:</strong> Al ser accesible, su web se abre al 15% de la población mundial que vive con alguna discapacidad (visual, auditiva o motriz).</li>
+            <li>✔️ <strong>Optimización SEO:</strong> Google prioriza sitios con estructura semántica correcta, mejorando su posicionamiento orgánico automáticamente.</li>
+            <li>✔️ <strong>Cumplimiento Legal:</strong> Alineación estricta con la Ley N° 29973 en Perú, evitando sanciones por discriminación en entornos digitales.</li>
+            <li>✔️ <strong>Interacción Universal:</strong> Usuarios con discapacidad motriz (navegación por teclado) o visual (lectores de pantalla) podrán completar flujos de compra y registro con éxito.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>3. Nuestra Propuesta: El Programa de 4 Semanas</h3>
+          <p>Transformamos la visión de su equipo técnico y directivo a través de una metodología práctica y basada en resultados.</p>
+          <table border="1">
+            <thead>
+              <tr>
+                <th scope="col">Sesión</th>
+                <th scope="col">Título</th>
+                <th scope="col">Objetivo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Semana 1</td>
+                <td>El Impacto de la Invisibilidad</td>
+                <td>Dinámica de empatía en el uso de lectores de pantalla (NVDA/JAWS) sobre aplicaciones reales. Diagnóstico del estado actual.</td>
+              </tr>
+              <tr>
+                <td>Semana 2</td>
+                <td>Arquitectura y Estándares WCAG</td>
+                <td>Introducción estratégica a las pautas internacionales. Cómo la semántica HTML ahorra costos de desarrollo a largo plazo.</td>
+              </tr>
+              <tr>
+                <td>Semana 3</td>
+                <td>Del Caos a la Interacción Total</td>
+                <td>Demostración en vivo de una App inaccesible vs. una App 100% optimizada con etiquetas ARIA y contrastes correctos.</td>
+              </tr>
+              <tr>
+                <td>Semana 4</td>
+                <td>Cultura de Mantenimiento Digital</td>
+                <td>Cómo integrar la accesibilidad en el flujo de trabajo (Workflow) sin retrasar los tiempos de entrega.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article>
+          <h3>4. Diferencia de nuestra Consultoría</h3>
+          <ul>
+            <li>✔️<strong> Enfoque en Resultados:</strong> No solo damos teoría; mostramos el "antes y después" funcional de su producto.</li>
+            <li>✔️<strong> Experiencia Real:</strong> Uso de tecnologías asistivas en tiempo real para validar la navegación, formularios y flujos críticos.</li>
+            <li>✔️<strong> Alineación Normativa:</strong> Basado estrictamente en las pautas WCAG 2.1 / 2.2, válidas en Perú y el extranjero (Estados Unidos y Europa).</li>
+          </ul>
+        </article>
+        <article>
+          <h3>5. Entregables Finales</h3>
+          <p>A continuación, le mostraré para que sienta que su inversión vale la pena:</p>
+          <ol type="A">
+            <li><strong>Reporte "Quick Wins":</strong> Un documento PDF con los 10 errores más críticos encontrados en su web y cómo solucionarlos de inmediato.</li>
+            <li><strong>Guía de Estilos Accesibles:</strong> Un manual breve de consulta rápida para que sus programadores lo usen en futuros proyectos.</li>
+          </ol>
+        </article>
+        <article>
+          <h3>6. Video de accesibilidad web</h3>
+          <p>En el siguiente video, podrá observar el contraste crítico entre una plataforma inaccesible y una optimizada al 100% mediante nuestra consultoría:</p>
+          <div class="video-container">
+            <!--<iframe src="https://drive.google.com/file/d/1qfQoTXQ6SjSyCY1J4TlHxwd/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>-->
+            <iframe src="https://drive.google.com/file/d/1Nutyk8zIq6QCZev9BiZOKL3j3fpYQTCd/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <p>Descripción breve: En el video hay una demostración de cómo una persona con discapacidad puede interactuar con una aplicación web accesible, desde el principio hasta el fin.</p>
+        </article>
+      </section>
+      <section id="inclusion">
+        <article>
+          <h2>Liderazgo en Tech: Programa de Inclusión Laboral para Desarrolladores Web con Discapacidad Visual</h2>
+          <p>Las barreras tecnológicas han caído. Hoy, gracias a lectores de pantalla, líneas Braille y editores de código accesibles como VS Code, las personas con discapacidad visual pueden desempeñarse como expertos en FrontEnd, BackEnd, FullStack y Administración de Base de Datos con la misma o mayor eficiencia que un desarrollador convencional.</p>
+          <figure>
+          <img src="" alt="Un equipo de desarrollo en una reunión de Daily Stand-up, donde uno de los integrantes utiliza audífonos y un lector de pantalla, integrado totalmente en la dinámica del equipo">
         </figure>
-        <p>No es solo inclusión, es innovación técnica y cumplimiento legal. ¿Está su empresa lista para el mercado global?</p>
-      </article>
-      <article>
-        <h3>1. ¿Por qué la Accesibilidad Web ya no es opcional?</h3>
-      <p>En Perú, la normativa exige que los servicios digitales sean accesibles. Más allá del cumplimiento de la Ley N° 29973, una web inaccesible significa:</p>
-      <ol type="A">
-        <li><strong>Pérdida de mercado:</strong> El 15% de la población mundial tiene alguna discapacidad.</li>
-        <li><strong>Peor SEO:</strong> Google penaliza los sitios que no siguen estándares de accesibilidad (WCAG).</li>
-        <li><strong>Riesgo Legal:</strong> Posibles sanciones por discriminación en servicios digitales.</li>
-      </ol>
-      </article>
-      <article>
-        <h3>2. Nuestra Propuesta: El Programa de 4 Semanas</h3>
-        <p>Transformamos la visión de su equipo técnico y directivo a través de una metodología práctica y basada en resultados.</p>
-        <table border="1">
-          <thead>
-            <tr>
-              <th scope="col">Sesión</th>
-              <th scope="col">Título</th>
-              <th scope="col">Objetivo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Semana 1</td>
-              <td>El Impacto de la Invisibilidad</td>
-              <td>Dinámica de empatía en el uso de lectores de pantalla (NVDA/JAWS) sobre aplicaciones reales. Diagnóstico del estado actual.</td>
-            </tr>
-            <tr>
-              <td>Semana 2</td>
-              <td>Arquitectura y Estándares WCAG</td>
-              <td>Introducción estratégica a las pautas internacionales. Cómo la semántica HTML ahorra costos de desarrollo a largo plazo.</td>
-            </tr>
-            <tr>
-              <td>Semana 3</td>
-              <td>Del Caos a la Interacción Total</td>
-              <td>Demostración en vivo de una App inaccesible vs. una App 100% optimizada con etiquetas ARIA y contrastes correctos.</td>
-            </tr>
-            <tr>
-              <td>Semana 4</td>
-              <td>Cultura de Mantenimiento Digital</td>
-              <td>Cómo integrar la accesibilidad en el flujo de trabajo (Workflow) sin retrasar los tiempos de entrega.</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-      <article>
-        <h3>3. Diferencia de nuestra Consultoría</h3>
+        <p>El talento no tiene límites, las barreras las ponemos nosotros. Transforme su cultura organizacional con perfiles tech de alto rendimiento.</p>
+        </article>
+        <article>
+          <h3>1. ¿Qué es la Inclusión Tecnológica?</h3>
+          <p>Es la integración real y efectiva de personas con discapacidad en el entorno laboral y productivo mediante el uso de tecnología.</p>
+          <ol type="A">
+            <li><strong>Empoderamiento a través del Software:</strong> Es el uso de herramientas como lectores de pantalla (NVDA/JAWS) o teclados adaptados que permiten a un profesional con discapacidad visual programar código complejo, gestionar bases de datos o liderar equipos de TI con la misma eficiencia que cualquier otro colega.</li>
+            <li><strong>Eliminación de prejuicios en el Talento: Al proporcionar el entorno digital adecuado, las empresas descubren que los desarrolladores con discapacidad suelen tener una capacidad lófica y analítica para la resolución de problemas muy superior a la media.</li>
+            <li><strong>IA como Asistente de Productividad:</strong> Herramientas de IA ayudan a programadores con discapacidad visual puedan recibir explicaciones visuales de una interfaz de usuario mediante modelos de lenguaje, eliminando las barreras que antes parecían imposibles.</li>
+            <li><strong>Estrategia de Innovación Corporativa:</strong> Los equipos inclusivos son más creativos porque ven los problemas desde ángulos diferentes, lo que genera productos más innovadores y mejora el clima laboral de toda la organización.</li>
+          </ol>
+        </article>
+        <article>
+          <h3>2. ¿Por qué contratar talento tech con discapacidad?</h3>
+          <ul>
+            <li>✔️ <strong>Alta Capacidad de Abstracción:</strong> Los desarrolladores con discapacidad visual suelen desarrollar habilidades lógicas y de memoria superiores para gestionar estructuras de datos complejas.</li>
+            <li>✔️ <strong>Mejora del Clima y Retención:</strong> Las empresas inclusivas reportan un mayor compromiso de sus colaboradores y una marca empleadora más fuerte.</li>
+            <li>✔️ <strong>Beneficios Tributarios en Perú:</strong> Deducciones adicionales en el Impuesto a la Renta por la contratación de personas con discapacidad, mejorando la rentabilidad financiera de la empresa.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>3. Temario del Programa</h3>
+        <p>Transformamos la visión de su equipo de reclutamiento, técnico y directivo a través de una metodología práctica y basada en resultados.</p>
+          <table border="1">
+            <thead>
+              <tr>
+                <th scope="col">Sesión</th>
+                <th scope="col">Título</th>
+                <th scope="col">Objetivo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Semana 1</td>
+                <td>Rompiendo el Sesgo de la Discapacidad</td>
+                <td>Análisis de mitos vs. realidades. Dinámica: ¿Cómo programa una persona con pérdida visual? (Demostración de herramientas de asistencia y flujo de trabajo).</td>
+              </tr>
+              <tr>
+                <td>Semana 2</td>
+                <td>Entornos de Trabajo Accesibles</td>
+                <td>Configuración de la oficina y herramientas digitales (Slack, Jira, VS Code). Cómo hacer que los procesos de comunicación interna sean inclusivos.</td>
+              </tr>
+              <tr>
+                <td>Semana 3</td>
+                <td>Reclutamiento y Selección sin Barreras</td>
+                <td>Cómo adaptar las entrevistas técnicas y las pruebas de código para que sean equitativas, evaluando el talento por encima de la condición.</td>
+              </tr>
+              <tr>
+                <td>Semana 4</td>
+                <td>Liderazgo y Gestión de Equipos Diversos</td>
+                <td>Estrategias para Jefes de Proyecto: Onboarding, mentoría y cómo potenciar el crecimiento profesional del nuevo talento en el equipo.</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+        <article>
+          <h3>4. ¿Qué ganará su empresa con este taller?</h3>
+          <ul>
+            <li><span>✔️<strong> Hoja de Ruta de Contratación:</strong> Un paso a paso claro desde la publicación de la vacante hasta el primer día de trabajo.</span></li>
+            <li><span>✔️<strong> Adaptación de Procesos:</strong> No necesita una remodelación costosa; le enseñamos cómo usar la tecnología que ya tiene para ser inclusivo.</span></li>
+            <li><span>✔️<strong> Posicionamiento de Marca:</strong> Proyecte una imagen de empresa moderna, humana y alineada con los Objetivos de Desarrollo Sostenible (ODS).</span></li>
+          </ul>
+        </article>
+        <article>
+          <h3>4. Entregables Recomendados para este Taller</h3>
+          <p>Para que RR.HH. y Gerencia sientan que tienen las herramientas listas para actuar:</p>
+          <ol type="A">
+            <li><strong>Guía de "Entrevista Técnica Inclusiva":</strong> Un checklist para evaluadores sobre cómo realizar pruebas de código accesibles.</li>
+            <li><strong>Protocolo de Onboarding:</strong> Un documento con los pasos para integrar a un desarrollador con discapacidad visual al equipo técnico en su primera semana.</li>
+            <li><strong>Sello de "Empresa Aliada de la Inclusión Tech":</strong> Un reconocimiento digital que pueden colocar en su web de "Trabaja con nosotros".</li>
+          </ol>
+        </article>
+        <article>
+          <h3>5. Video de Inclusión Laboral</h3>
+          <p>Vea una sesión de programación real donde un desarrollador con discapacidad visual construye y despliega una aplicación web:</p>
+          <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1Nutyk8zIq6QCZev9BiZOKL3j3fpYQTCd/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <p>Descripción breve: En el video hay una demostración de cómo una persona con discapacidad trabaja en una empresa en el Área de Tecnología, trato totalmente inclusivo con los demás empleados.</p>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <section id="contactanos">
+        <h3>6. ¡Inicie la Transformación Hoy!</h3>
+        <p>La inclusión no es un acto de caridad, es un acto de inteligencia empresarial. ¿Está listo para liderar el cambio digital en su sector?</p>
         <ul>
-          <li><span>✔️<strong> Enfoque en Resultados:</strong> No solo damos teoría; mostramos el "antes y después" funcional de su producto.</span></li>
-          <li><span>✔️<strong> Experiencia Real:</strong> Uso de tecnologías asistivas en tiempo real para validar la navegación, formularios y flujos críticos.</span></li>
-          <li><span>✔️<strong> Alineación Normativa:</strong> Basado estrictamente en las pautas WCAG 2.1 / 2.2, válidas en Perú y el extranjero (Estados Unidos y Europa).</span></li>
+          <li>✔️ Contacto: Ingeniero de Sistemas, Brajean Méndiz Flores.</li>
+          <li>✔️ LinkedIn: <a href="https://www.linkedin.com/in/brajean-m%C3%A9ndiz-flores-5ba7b9b2/" target="_blank">Perfil de LinkedIn de Brajean Méndiz Flores</a></li>
+          <li>✔️ WhatsApp: <button id="whatsapp" onclick="enviarMensaje()">Agendar Consultoría</button></li>
+          <li>✔ 📧: <a href="mailto:tallerdp.appweb@gmail.com?subject=Iniciar%20proceso%20CT&body=%C2%A1Hola%20Ing.%20Brajean%20M%C3%A9ndiz!%0ANos%20gustaría%20iniciar%20el%20proceso%20con%20respecto%20a%20las%20Capacitaciones%20Tecnol%C3%B3gicas.%0AEstaremos%20a%20la%20espera%20de%20su%20comunicaci%C3%B3n..%20%F0%9F%92%BB" target="_blank">tallerdp.appweb@gmail.com</a></li>
+          <li>✔ 📱: <a href="tel:992891965">+51 992 891 965</a></li>
+          <li>✔️ <strong>Ubicación: </strong>Chorrillos, Lima - Perú.</li>
         </ul>
-      </article>
+      </section>
       <article>
-        <h3>4. Entregables Finales</h3>
-        <p>A continuación, le mostraré para que sienta que su inversión vale la pena:</p>
-        <ol type="A">
-          <li><strong>Certificado de "Equipo Formado en Accesibilidad Digital":</strong> Un diploma digital para los desarrolladores y la empresa (da prestigio en LinkedIn).</li>
-          <li><strong>Reporte "Quick Wins":</strong> Un documento PDF con los 10 errores más críticos encontrados en su web y cómo solucionarlos de inmediato.</li>
-          <li><strong>Guía de Estilos Accesibles:</strong> Un manual breve de consulta rápida para que sus programadores lo usen en futuros proyectos.</li>
-        </ol>
+        <h6>&copy; Bmenflo Access Consulting 2026</h6>
       </article>
-      <article>
-        <h3>5. Video de accesibilidad web</h3>
-        <p>Video demostrativo de accesibilidad web</p>
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/watch?v=fcXL0tfcgqc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <p>Descripción breve: En el video hay una demostración de cómo una persona con discapacidad interactúa con una aplicación web accesible, desde el principio hasta el fin.</p>
-      </article>
-    </section>
-    <section id="inclusion">
-      <article>
-        <h2>Liderazgo en Tech: Programa de Inclusión Laboral para Desarrolladores Web con Discapacidad Visual</h2>
-        <figure>
-        <img src="" alt="Un equipo de desarrollo en una reunión de Daily Stand-up, donde uno de los integrantes utiliza audífonos y un lector de pantalla, integrado totalmente en la dinámica del equipo">
-      </figure>
-      <p>El talento no tiene límites, las barreras las ponemos nosotros. Transforme su cultura organizacional con perfiles tech de alto rendimiento.</p>
-      </article>
-      <article>
-        <h3>1. El Valor de la Diversidad en Tecnología</h3>
-        <p>Las empresas más innovadoras del mundo (Google, Microsoft, Apple) ya lo saben: equipos diversos resuelven problemas de forma más creativa.</p>
-        <ol type="A">
-          <li><strong>Productividad Real:</strong> Un desarrollador con discapacidad visual posee habilidades de abstracción y resolución de problemas altamente desarrolladas.</li>
-          <li><strong>Cultura Inclusiva:</strong> Mejora el clima laboral y el orgullo de pertenencia de todos los empleados.</li>
-          <li><strong>Beneficios Tributarios:</strong> En Perú, existen deducciones adicionales sobre el Impuesto a la Renta por la contratación de personas con discapacidad (Ley N° 29973).</li>
-        </ol>
-      </article>
-      <article>
-        <h3>2. Temario del Programa</h3>
-      <p>Transformamos la visión de su equipo de reclutamiento, técnico y directivo a través de una metodología práctica y basada en resultados.</p>
-        <table border="1">
-          <thead>
-            <tr>
-              <th scope="col">Sesión</th>
-              <th scope="col">Título</th>
-              <th scope="col">Objetivo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Semana 1</td>
-              <td>Rompiendo el Sesgo de la Discapacidad</td>
-              <td>Análisis de mitos vs. realidades. Dinámica: ¿Cómo programa una persona con pérdida visual? (Demostración de herramientas de asistencia y flujo de trabajo).</td>
-            </tr>
-            <tr>
-              <td>Semana 2</td>
-              <td>Entornos de Trabajo Accesibles</td>
-              <td>Configuración de la oficina y herramientas digitales (Slack, Jira, VS Code). Cómo hacer que los procesos de comunicación interna sean inclusivos.</td>
-            </tr>
-            <tr>
-              <td>Semana 3</td>
-              <td>Reclutamiento y Selección sin Barreras</td>
-              <td>Cómo adaptar las entrevistas técnicas y las pruebas de código para que sean equitativas, evaluando el talento por encima de la condición.</td>
-            </tr>
-            <tr>
-              <td>Semana 4</td>
-              <td>Liderazgo y Gestión de Equipos Diversos</td>
-              <td>Estrategias para Jefes de Proyecto: Onboarding, mentoría y cómo potenciar el crecimiento profesional del nuevo talento en el equipo.</td>
-            </tr>
-          </tbody>
-        </table>
-      </article>
-      <article>
-        <h3>3. ¿Qué ganará su empresa con este taller?</h3>
-        <ul>
-          <li><span>✔️<strong> Hoja de Ruta de Contratación:</strong> Un paso a paso claro desde la publicación de la vacante hasta el primer día de trabajo.</span></li>
-          <li><span>✔️<strong> Adaptación de Procesos:</strong> No necesita una remodelación costosa; le enseñamos cómo usar la tecnología que ya tiene para ser inclusivo.</span></li>
-          <li><span>✔️<strong> Posicionamiento de Marca:</strong> Proyecte una imagen de empresa moderna, humana y alineada con los Objetivos de Desarrollo Sostenible (ODS).</span></li>
-        </ul>
-      </article>
-      <article>
-        <h3>4. Entregables Recomendados para este Taller</h3>
-        <p>Para que RR.HH. y Gerencia sientan que tienen las herramientas listas para actuar:</p>
-        <ol type="A">
-          <li><strong>Guía de "Entrevista Técnica Inclusiva":</strong> Un checklist para evaluadores sobre cómo realizar pruebas de código accesibles.</li>
-          <li><strong>Protocolo de Onboarding:</strong> Un documento con los pasos para integrar a un desarrollador con discapacidad visual al equipo técnico en su primera semana.</li>
-          <li><strong>Sello de "Empresa Aliada de la Inclusión Tech":</strong> Un reconocimiento digital que pueden colocar en su web de "Trabaja con nosotros".</li>
-        </ol>
-      </article>
-      <article>
-        <h3>5. Video de Inclusión Laboral</h3>
-        <p>Video demostrativo de Inclusión Laboral</p>
-        <video controls width="100%" poster="" aria-describedby="video-desc">
-          <source src="" type="video/mp4">
-        </video>
-        <p>Descripción breve: En el video hay una demostración de cómo una persona con discapacidad trabaja en una empresa en el Área de Tecnología, trato totalmente inclusivo con los demás empleados.</p>
-      </article>
-    </section>
-  </main>
-  <footer>
-    <section id="contactanos">
-      <h3>6. ¡Inicie la Transformación Hoy!</h3>
-      <p>La inclusión no es un acto de caridad, es un acto de inteligencia empresarial. ¿Está listo para liderar el cambio digital en su sector?</p>
-      <ul>
-        <li>✔️ Contacto: Ingeniero de Sistemas, Brajean Méndiz Flores.</li>
-        <li>✔️ LinkedIn: <a href="https://www.linkedin.com/in/brajean-m%C3%A9ndiz-flores-5ba7b9b2/" target="_blank">Perfil de LinkedIn de Brajean Méndiz Flores</a></li>
-        <li>✔️ WhatsApp: <button onclick="enviarMensaje()">Inicia ya!</button></li>
-        <li>✔ 📧: <a href="mailto:tallerdp.appweb@gmail.com?subject=Iniciar%20proceso%20CT&body=%C2%A1Hola%20Ing.%20Brajean%20M%C3%A9ndiz!%0ANos%20gustaría%20iniciar%20el%20proceso%20con%20respecto%20a%20las%20Capacitaciones%20Tecnol%C3%B3gicas.%0AEstaremos%20a%20la%20espera%20de%20su%20comunicaci%C3%B3n..%20%F0%9F%92%BB" target="_blank">tallerdp.appweb@gmail.com</a></li>
-        <li>✔ 📱: <a href="tel:992891965">+51 992 891 965</a></li>
-        <li>✔️ <strong>Ubicación: </strong>Chorrillos, Lima - Perú.</li>
-      </ul>
-    </section>
-    <article>
-      <h6>&copy; Bmenflo Access Consulting 2026</h6>
-    </article>
-  </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    $("#inclusion").hide();
-    $("#il").click(function(){
-      $("#accesibilidad").hide();
-      $("#inclusion").show();
-    })
-    $("#aw").click(function(){
-      $("#accesibilidad").show();
-      $("#inclusion").hide();
-    })
-  })
-        function enviarMensaje() {
-            let numeroCelular = '51992891965';
-            let mensaje = '¡Hola Ing. Brajean Méndiz!%0ANos gustaría iniciar con el proceso con respecto a las Capacitaciones Tecnológicas.%0AEstaremos a la espera de su comunicación.. 💻';
-            let mensajeCodificado = encodeURIComponent(mensaje);
-            let urlWhatsApp = `https://wa.me/${numeroCelular}?text=${mensajeCodificado}`;
-            window.open(urlWhatsApp, '_blank');
-        }
+    </footer>
 
-  </script>
-</body>
-</body>
-</html>
+<script>
+$(document).ready(function(){
+    // Estado inicial: solo mostramos la primera sección
+    $("#inclusion").hide();
+
+    // Interacción de la sección Inclusión con efecto Fade
+    $("#il").on("click", function(e){
+        e.preventDefault();
+        $("#accesibilidad").fadeOut(400, function(){
+            $("#inclusion").fadeIn(600);
+        });
+    });
+
+    // Interacción de la sección Accesibilidad con efecto Fade
+    $("#aw").on("click", function(e){
+        e.preventDefault();
+        $("#inclusion").fadeOut(400, function(){
+            $("#accesibilidad").fadeIn(600);
+        });
+    });
+
+    // Efecto de cierre de menú móvil tras hacer clic (Mejora UX)
+    $("nav ul li a").on("click", function(){
+        if ($(window).width() < 768) {
+            $("nav ul").hide(); // Oculta el menú tras seleccionar
+        }
+    });
+});
+
+// Función de WhatsApp mejorada
+function enviarMensaje() {
+    const numeroCelular = '51992891965';
+    // Nota: El texto no debe estar doblemente codificado, encodeURIComponent se encarga de todo.
+    const mensajeOriginal = '¡Hola Ing. Brajean Méndiz! 👋\nNos gustaría iniciar con el proceso con respecto a las Capacitaciones Tecnológicas. 💻\nEstaremos a la espera de su comunicación.';
+    
+    const urlWhatsApp = `https://wa.me/${numeroCelular}?text=${encodeURIComponent(mensajeOriginal)}`;
+    window.open(urlWhatsApp, '_blank');
+}
+</script>
+  </body>
+</html>      
