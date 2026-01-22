@@ -16,10 +16,10 @@
 }
 
 :root {
-  --bg-dark-purple: #00008b;
-  --text-white: #ffffff;
-  --accent-white: #ffffff;
-  --border-white: #ffffff;
+  --bg-white: #ffffff;
+  --text-dark-purple: #00008b;
+  --accent-dark-purple: #00008b;
+  --border-dark-purple: #00008b;
   --whatsapp-green: #25D366;
 }
 
@@ -34,19 +34,25 @@ html {
 html, body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-dark-purple);
-  color: var(--text-white);
+  background-color: var(--bg-white);
+  color: var(--text-dark-purple);
   font-family: "Calibri", "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
 }
 
 /* Imágenes y videos responsivos */
 img, video {
-  border: 2px solid #ffffff;
+  border: 2px solid #00008b;
 border-radius: 5px;
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease; /* Efecto suave de ampliación */
+}
+
+img:hover, video:hover {
+  transform: scale(1.02);      /* Ampliación sutil al pasar el mouse */
+  box-shadow: 0 4px 15px rgba(0, 0, 139, 0.3);
 }
 
 /* Encabezados y textos */
@@ -54,27 +60,27 @@ h1 {
   font-size: 1.8rem;            /* móvil */
   text-align: center;
   margin: 24px auto;
-  color: var(--text-white);
+  color: var(--text-dark-purple);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* sombreado sutil */
 }
 
 h2 {
   font-size: 1.4rem;            /* móvil */
-  color: var(--text-white);
+  color: var(--text-dark-purple);
   margin: 16px 16px 8px;
   padding: 4px 0;
 }
 
 h3 {
   font-size: 1.2rem;            /* móvil */
-  color: var(--text-white);
+  color: var(--text-dark-purple);
   margin: 12px 24px 8px;        /* desplazado hacia la derecha */
   padding: 2px 0;
 }
 
 p, li {
   font-size: 1rem;              /* móvil */
-  color: var(--text-white);
+  color: var(--text-dark-purple);
   margin: 8px 24px;
   text-align: justify;          /* justificado */
 }
@@ -84,7 +90,7 @@ ul {
   list-style: none;
 }
 
-ul,ol {
+ul, ol {
   padding-left: 0;
   margin: 8px 24px;
 }
@@ -98,7 +104,7 @@ ul li, ol li {
   width: 100%;
   background: transparent;
   border: none;
-  color: var(--text-white);
+  color: var(--text-dark-purple);
   font-size: 1.1rem;
   cursor: pointer;
   padding: 5px;
@@ -109,9 +115,9 @@ nav {
   position: relative;
   margin: 20px auto;
   padding: 10px;
-  border: 2px solid var(--border-white);
+  background-color: grey;
+  border: 2px solid var(--border-dark-purple);
   border-radius: 12px;
-  background: #c0c0c0;      /* sin fondo */
   max-width: 92%;
 }
 
@@ -119,7 +125,7 @@ nav {
 nav::before {
   content: "☰ Menú";
   display: inline-block;
-  color: var(--text-white);
+  color: var(--text-dark-purple);
   font-size: 1rem;
   padding: 6px 10px;
   cursor: pointer;
@@ -141,7 +147,7 @@ nav:focus-within ul {
 
 /* Enlaces de navegación */
 nav a {
-  color: var(--text-white);
+  color: #ffffff;
   text-decoration: none;
   padding: 10px;                /* separación de texto */
   display: inline-block;
@@ -153,22 +159,22 @@ table {
   margin: 16px auto;
   border-collapse: separate;
   border-spacing: 0;
-  border: 2px solid var(--border-white);
+  border: 2px solid var(--border-dark-purple);
   border-radius: 8px;           /* esquinas redondeadas del contenedor */
   overflow: hidden;             /* aplica el redondeo visual */
-  color: var(--text-white);
+  color: var(--text-dark-purple);
   text-align: center;
 }
 
 thead th {
   font-weight: 700;             /* primera fila en negrita */
-  border-bottom: 2px solid var(--border-white);
+  border-bottom: 2px solid var(--border-dark-purple);
   padding: 8px;                 /* mayor legibilidad en encabezado */
 }
 
 tbody td {
   padding: 5px;                 /* separación interna */
-  border-top: 1px solid var(--border-white);
+  border-top: 1px solid var(--border-dark-purple);
 }
 
 /* Video */
@@ -192,7 +198,7 @@ tbody td {
 #whatsapp {
   font-family: "Calibri", "Segoe UI", Arial, sans-serif;
   font-size: 1rem;
-  color: var(--text-white);
+  color: var(--text-dark-purple);
   background-color: var(--whatsapp-green);
   border: none;
   border-radius: 10px;
@@ -210,7 +216,7 @@ button:focus {
 
 #contactanos ul li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #00008b;
 }
 
 /* Footer: h6 centrado */
@@ -218,12 +224,15 @@ footer h6 {
   text-align: center;
   font-size: 0.95rem;
   margin: 24px auto;
-  color: var(--text-white);
+  color: var(--text-dark-purple);
 }
 
 /* Ajustes de figuras */
 figure {
-  margin: 12px 24px;
+  margin: 20px auto;
+  display: flex;               /* Usamos flexbox para centrar el contenido interno */
+  justify-content: center;
+  width: 100%;                 /* Ocupa todo el ancho disponible */
 }
 
 /* MAIN contenedor */
@@ -260,15 +269,29 @@ main {
   nav ul {
     display: flex !important;    /* siempre visible en tablet */
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
+    gap: 0;
     margin: 0;
+    width: 100%;
+  }
+
+  nav ul li {
+    flex: 1;                     /* Hace que cada parte ocupe exactamente el mismo ancho (25%) */
+    text-align: center;          /* Centra el texto dentro de su espacio */
+    border-right: 1px solid rgba(255, 255, 255, 0.3); /* Línea divisoria sutil */
+  }
+
+  nav ul li:last-child {
+    border-right: none;          /* Quita la línea divisoria a la última opción */
   }
 
   nav a {
-    padding: 10px 14px;
-    margin: 0 6px;
+    padding: 10px 5px;
+    margin: 0 0;
+    display: block;
+    width: 100%;
+    font-size: 0.95rem;          /* Ajuste leve para que quepa el texto largo */
   }
 
   table {
@@ -294,11 +317,14 @@ main {
   h3 { font-size: 1.4rem; margin: 16px 40px 12px; }
   p  { font-size: 1.1rem; margin: 12px 40px; }
 
+  img {
+    max-width: 70%;            /* En PC se ve mejor si no ocupa todo el ancho */
+  }
+
   /* Barra de navegación ampliando ancho y altura */
   nav {
-    max-width: 1200px;
-    padding: 16px;
-    margin: 24px auto;
+    max-width: 100%;
+    padding: 10px;
     border-radius: 16px;
   }
 
@@ -307,9 +333,8 @@ main {
   }
 
   nav a {
-    padding: 12px 18px;
-    margin: 0 8px;
-    font-size: 1.05rem;
+    padding: 15px 10px;
+    font-size: 1.1rem;           /* Texto un poco más grande en PC */
   }
 
   table {
@@ -340,9 +365,7 @@ main {
       <h1>Brochure Tecnológico</h1>
     </header>
       <nav>
-        <button id="menu-toggle" class="btn-menu-movil" aria-label="Abrir menú">
-          <span id="icono-menu">☰</span>
-        </button>
+        <button id="menu-toggle" class="btn-menu-movil">Menú</button>
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a id="aw" href="#accesibilidad-web">Accesibilidad Web</a></li>
@@ -356,7 +379,8 @@ main {
           <h2>Web para Todos: Consultoría Técnica y Transformación en Accesibilidad Digital</h2>
           <p>La Accesibilidad Web es la práctica de eliminar barreras que impiden la interacción o el acceso a sitios web por parte de personas con discapacidad. No es solo una mejora visual; es asegurar que su infraestructura digital cumpla con las pautas internacionales WCAG 2.1 y 2.2 (Web Content Accessibility Guidelines).</p>
           <figure>
-            <img src="https://drive.google.com/uc?export=view&id=1Zirg3W7E7ahMn4O4xFxiIPNikw_N4LNT" alt="Una captura de pantalla dividida. En un lado, código desordenado y una persona frustrada; en el otro, una interfaz limpia, un lector de pantalla activo y una persona con discapacidad navegando con éxito.">
+            <img src="https://scontent.flim4-3.fna.fbcdn.net/v/t39.30808-6/616841441_917801640777983_7271492998801900977_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gtXl2WxjnO0Q7kNvwFfDAYA&_nc_oc=Adn5BzSsdEt6GC8s-mQYG9eDKc0PGudzVUj3joquIp6fa4D33smXQjuGuOhW4wHWI80&_nc_zt=23&_nc_ht=scontent.flim4-3.fna&_nc_gid=-xL1asyHxWyoz8Onm_YyWw&oh=00_AfqHffaa2OgaGZPn3HcmejPmxuJKtVZ3wNzoUgz7PFYzEQ&oe=69770324" alt="Una interfaz limpia, un lector de pantalla activo y una persona con discapacidad navegando con éxito.">
+            <!--<img src="https://drive.google.com/uc?export=download&id=1Zirg3W7E7ahMn4O4xFxiIPNikw_N4LNT" alt="Una captura de pantalla dividida. En un lado, código desordenado y una persona frustrada; en el otro, una interfaz limpia, un lector de pantalla activo y una persona con discapacidad navegando con éxito.">-->
           </figure>
           <p>No es solo inclusión, es innovación técnica y cumplimiento legal. ¿Está su empresa lista para el mercado global?</p>
         </article>
@@ -434,10 +458,14 @@ main {
           <h3>6. Video de accesibilidad web</h3>
           <p>En el siguiente video, podrá observar el contraste crítico entre una plataforma inaccesible y una optimizada al 100% mediante nuestra consultoría:</p>
           <div class="video-container">
-            <iframe src="https://drive.google.com/file/d/1Nutyk8zIq6QCZev9BiZOKL3j3fpYQTCd/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
-            <!--<video class="video-responsive" controls preload="metadata" poster="tu-imagen-miniatura.jpg">
-              <source src="https://drive.google.com/uc?export=download&id=1Nutyk8zIq6QCZev9BiZOKL3j3fpYQTCd" type="video/mp4">
-            </video>-->
+            <!--<iframe src="https://drive.google.com/file/d/1Nutyk8zIq6QCZev9BiZOKL3j3fpYQTCd/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>-->
+  <iframe 
+    src="https://www.youtube.com/embed/Hl-C46k8r8s?rel=0&controls=1" 
+    title="Video demostrativo: Mejora de Accesibilidad Web y cumplimiento WCAG"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
           </div>
           <p>Descripción breve: En el video hay una demostración de cómo una persona con discapacidad puede interactuar con una aplicación web accesible, desde el principio hasta el fin.</p>
         </article>
@@ -447,7 +475,8 @@ main {
           <h2>Liderazgo en Tech: Programa de Inclusión Laboral para Desarrolladores Web con Discapacidad Visual</h2>
           <p>Las barreras tecnológicas han caído. Hoy, gracias a lectores de pantalla, líneas Braille y editores de código accesibles como VS Code, las personas con discapacidad visual pueden desempeñarse como expertos en FrontEnd, BackEnd, FullStack y Administración de Base de Datos con la misma o mayor eficiencia que un desarrollador convencional.</p>
           <figure>
-          <img src="https://drive.google.com/uc?export=view&id=1wohGvZ6YJMvpUsRqDDhUNb1" alt="Un equipo de desarrollo en una reunión de Daily Stand-up, donde uno de los integrantes utiliza audífonos y un lector de pantalla, integrado totalmente en la dinámica del equipo">
+          <img src="https://scontent.flim4-3.fna.fbcdn.net/v/t39.30808-6/617312442_917801777444636_9053475624029026816_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=_oFTgj8ZU4sQ7kNvwGygts1&_nc_oc=AdkWA3Ammrb_YEvQas3aQO7_pksdelJQCrdXlT9_fuGXJK8gxzjh0vXcjYkTvkA_m7U&_nc_zt=23&_nc_ht=scontent.flim4-3.fna&_nc_gid=smhXwGoAw515NtzThoeRvg&oh=00_AfqnHSyOuDm-nBYdvqdBOVEyxEDElo5WemaM92vK5tzgEA&oe=6976E7F8" alt="Un desarrollador web con discapacidad visuak que utiliza audífonos y un lector de pantalla, integrado totalmente en la dinámica del equipo de trabajo.">
+          <!--<img src="https://drive.google.com/uc?export=download&id=1wohGvZ6YJMvpUsRqDDhUNb1" alt="Un equipo de desarrollo en una reunión de Daily Stand-up, donde uno de los integrantes utiliza audífonos y un lector de pantalla, integrado totalmente en la dinámica del equipo">-->
         </figure>
         <p>El talento no tiene límites, las barreras las ponemos nosotros. Transforme su cultura organizacional con perfiles tech de alto rendimiento.</p>
         </article>
@@ -513,7 +542,7 @@ main {
           </ul>
         </article>
         <article>
-          <h3>4. Entregables Recomendados para este Taller</h3>
+          <h3>5. Entregables Recomendados para este Taller</h3>
           <p>Para que RR.HH. y Gerencia sientan que tienen las herramientas listas para actuar:</p>
           <ol type="A">
             <li><strong>Guía de "Entrevista Técnica Inclusiva":</strong> Un checklist para evaluadores sobre cómo realizar pruebas de código accesibles.</li>
@@ -522,10 +551,17 @@ main {
           </ol>
         </article>
         <article>
-          <h3>5. Video de Inclusión Laboral</h3>
+          <h3>6. Video de Inclusión Laboral</h3>
           <p>Vea una sesión de programación real donde un desarrollador con discapacidad visual construye y despliega una aplicación web:</p>
           <div class="video-container">
-            <iframe src="https://drive.google.com/file/d/1h11_avBQJIagd8Ih32L4pvsezDRwy7cC/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>
+            <!--<iframe src="https://drive.google.com/file/d/1h11_avBQJIagd8Ih32L4pvsezDRwy7cC/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>-->
+  <iframe 
+    src="https://www.youtube.com/embed/Hl-C46k8r8s?rel=0&controls=1" 
+    title="Video demostrativo: Mejora de Accesibilidad Web y cumplimiento WCAG"
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
           </div>
           <p>Descripción breve: En el video hay una demostración de cómo una persona con discapacidad trabaja en una empresa en el Área de Tecnología, trato totalmente inclusivo con los demás empleados.</p>
         </article>
@@ -533,7 +569,7 @@ main {
     </main>
     <footer>
       <section id="contactanos">
-        <h3>6. ¡Inicie la Transformación Hoy!</h3>
+        <h3>7. ¡Inicie la Transformación Hoy!</h3>
         <p>La inclusión no es un acto de caridad, es un acto de inteligencia empresarial. ¿Está listo para liderar el cambio digital en su sector?</p>
         <ul>
           <li>✔️ Contacto: Ingeniero de Sistemas, Brajean Méndiz Flores.</li>
@@ -570,6 +606,11 @@ $(document).ready(function(){
         });
     });
 
+    //menú para mostrar
+    $("#menu-toggle").click(function() {
+      $("nav ul").show();
+    });
+
     // Efecto de cierre de menú móvil tras hacer clic (Mejora UX)
     $("nav ul li a").on("click", function(){
         if ($(window).width() < 768) {
@@ -583,7 +624,6 @@ function enviarMensaje() {
     const numeroCelular = '51992891965';
     // Nota: El texto no debe estar doblemente codificado, encodeURIComponent se encarga de todo.
     const mensajeOriginal = '¡Hola Ing. Brajean Méndiz! 👋\nNos gustaría iniciar con el proceso con respecto a las Capacitaciones Tecnológicas. 💻\nEstaremos a la espera de su comunicación.';
-    
     const urlWhatsApp = `https://wa.me/${numeroCelular}?text=${encodeURIComponent(mensajeOriginal)}`;
     window.open(urlWhatsApp, '_blank');
 }
