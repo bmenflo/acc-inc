@@ -59,7 +59,7 @@ img:hover, video:hover {
 h1 {
   font-size: 1.8rem;            /* móvil */
   text-align: center;
-  margin: 24px auto;
+  margin: 20px auto;
   color: var(--text-dark-purple);
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25); /* sombreado sutil */
 }
@@ -67,21 +67,21 @@ h1 {
 h2 {
   font-size: 1.4rem;            /* móvil */
   color: var(--text-dark-purple);
-  margin: 16px 16px 8px;
+  margin: 16px 0 8px;
   padding: 4px 0;
 }
 
 h3 {
   font-size: 1.2rem;            /* móvil */
   color: var(--text-dark-purple);
-  margin: 12px 24px 8px;        /* desplazado hacia la derecha */
+  margin: 12px 0 8px;        /* desplazado hacia la derecha */
   padding: 2px 0;
 }
 
 p, li {
   font-size: 1rem;              /* móvil */
   color: var(--text-dark-purple);
-  margin: 8px 24px;
+  margin: 8px 0;
   text-align: justify;          /* justificado */
 }
 
@@ -92,11 +92,7 @@ ul {
 
 ul, ol {
   padding-left: 0;
-  margin: 8px 24px;
-}
-
-ul li, ol li {
-  margin: 6px 0;
+  margin: 8px;
 }
 
 /* Navegación: móvil primero (hamburguesa) */
@@ -241,14 +237,24 @@ main {
   margin: 0 auto;
 }
 
+#Accesibilidad, #inclusion {
+  Border: 3px solid #00008b;
+  Border-radius: 5px;
+  Padding: 10px;
+}
+
 /* =========================
    Responsive: Tablet
    ========================= */
 @media (min-width: 600px) {
   h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.6rem; margin: 18px 24px 10px; }
-  h3 { font-size: 1.3rem; margin: 14px 32px 10px; }
-  p  { font-size: 1.05rem; margin: 10px 32px; }
+  h2 { font-size: 1.6rem; margin: 18px 0 10px; }
+  h3 { font-size: 1.3rem; margin: 14px 0 10px; }
+  p  { font-size: 1.05rem; margin: 10px 0; }
+
+  #accesibilidad, #inclusion {
+    Padding: 20px;
+  }
 
   /* Navegación horizontal en tablet */
   .btn-menu-movil {
@@ -313,9 +319,13 @@ main {
    ========================= */
 @media (min-width: 1024px) {
   h1 { font-size: 2.6rem; }
-  h2 { font-size: 1.8rem; margin: 20px 32px 12px; }
-  h3 { font-size: 1.4rem; margin: 16px 40px 12px; }
-  p  { font-size: 1.1rem; margin: 12px 40px; }
+  h2 { font-size: 1.8rem; margin: 20px 0 12px; }
+  h3 { font-size: 1.4rem; margin: 16px 0 12px; }
+  p  { font-size: 1.1rem; margin: 12px 0; }
+
+  #accesibilidad, #inclusion {
+    Padding: 30px;
+  }
 
   img {
     max-width: 70%;            /* En PC se ve mejor si no ocupa todo el ancho */
@@ -388,19 +398,19 @@ main {
           <h3>1. ¿Qué es Accesibilidad Web?</h3>
         <p>Es la práctica de diseñar y desarrollar sitios web, herramientas y tecnologías para que las personas con discapacidad puedan usarlas.</p>
         <ol type="A">
-          <li><b>Desarrollo Universal Digital:</b> Es garantizar que cualquier persona, sin importar su condición física o sensorial pueda navegar, entender e interactuar con una página web de manera autónoma.</li>
-          <li><b>Cumplimiento de WCAG:</b> Estas reglas aseguran que el contenido sea Percibible (que se pueda ver o escuchar), Operable (que se pueda usar solo con el teclado o voz), Comprensible (que no sea confuso) y Robusto (que funcione en cualquier dispositivo moderno).</li>
-          <li><b>Puente Tecnológico de IA:</b> Gracias a la Inteligencia Artificial, hoy, la IA puede generar descripciones automáticas de imágenes para personas con pérdida visual, subtitular videos en tiempo real para personas con discapacidad auditiva y simplificar textos complejos para personas con discapacidad cognitiva.</li>
-          <li><b>Optimización para el Futuro del Negocio:</b> No es solo para personas con discapacidad; una web accesible carga más rápido, se ve mejor en celulares y tiene un mejor posicionamiento en Google (SEO).</li>
+          <li>Desarrollo Universal Digital: Es garantizar que cualquier persona, sin importar su condición física o sensorial pueda navegar, entender e interactuar con una página web de manera autónoma.</li>
+          <li>Cumplimiento de WCAG: Estas reglas aseguran que el contenido sea Percibible (que se pueda ver o escuchar), Operable (que se pueda usar solo con el teclado o voz), Comprensible (que no sea confuso) y Robusto (que funcione en cualquier dispositivo moderno).</li>
+          <li>Puente Tecnológico de IA: Gracias a la Inteligencia Artificial, hoy, la IA puede generar descripciones automáticas de imágenes para personas con pérdida visual, subtitular videos en tiempo real para personas con discapacidad auditiva y simplificar textos complejos para personas con discapacidad cognitiva.</li>
+          <li>Optimización para el Futuro del Negocio: No es solo para personas con discapacidad; una web accesible carga más rápido, se ve mejor en celulares y tiene un mejor posicionamiento en Google (SEO).</li>
         </ol>
         </article>
         <article>
           <h3>2. Impacto en el Negocio y Beneficios</h3>
           <ul>
-            <li>✔️ <b>AAumento de Tráfico y Mercado:</b> Al ser accesible, su web se abre al 15% de la población mundial que vive con alguna discapacidad (visual, auditiva o motriz).</li>
-            <li>✔️ <b>Optimización SEO:</b> Google prioriza sitios con estructura semántica correcta, mejorando su posicionamiento orgánico automáticamente.</li>
-            <li>✔️ <b>Cumplimiento Legal:</b> Alineación estricta con la Ley N° 29973 en Perú, evitando sanciones por discriminación en entornos digitales.</li>
-            <li>✔️ <b>Interacción Universal:</b> Usuarios con discapacidad motriz (navegación por teclado) o visual (lectores de pantalla) podrán completar flujos de compra y registro con éxito.</li>
+            <li>✔️ Aumento de Tráfico y Mercado: Al ser accesible, su web se abre al 15% de la población mundial que vive con alguna discapacidad (visual, auditiva o motriz).</li>
+            <li>✔️ Optimización SEO: Google prioriza sitios con estructura semántica correcta, mejorando su posicionamiento orgánico automáticamente.</li>
+            <li>✔️ Cumplimiento Legal: Alineación estricta con la Ley N° 29973 en Perú, evitando sanciones por discriminación en entornos digitales.</li>
+            <li>✔️ Interacción Universal: Usuarios con discapacidad motriz (navegación por teclado) o visual (lectores de pantalla) podrán completar flujos de compra y registro con éxito.</li>
           </ul>
         </article>
         <article>
@@ -441,17 +451,17 @@ main {
         <article>
           <h3>4. Diferencia de nuestra Consultoría</h3>
           <ul>
-            <li>✔️<b> Enfoque en Resultados:</b> No solo damos teoría; mostramos el "antes y después" funcional de su producto.</li>
-            <li>✔️<b> Experiencia Real:</b> Uso de tecnologías asistivas en tiempo real para validar la navegación, formularios y flujos críticos.</li>
-            <li>✔️<b> Alineación Normativa:</b> Basado estrictamente en las pautas WCAG 2.1 / 2.2, válidas en Perú y el extranjero (Estados Unidos y Europa).</li>
+            <li>✔️ Enfoque en Resultados: No solo damos teoría; mostramos el "antes y después" funcional de su producto.</li>
+            <li>✔️ Experiencia Real: Uso de tecnologías asistivas en tiempo real para validar la navegación, formularios y flujos críticos.</li>
+            <li>✔️ Alineación Normativa: Basado estrictamente en las pautas WCAG 2.1 / 2.2, válidas en Perú y el extranjero (Estados Unidos y Europa).</li>
           </ul>
         </article>
         <article>
           <h3>5. Entregables Finales</h3>
           <p>A continuación, le mostraré para que sienta que su inversión vale la pena:</p>
           <ol type="A">
-            <li><b>Reporte "Quick Wins":</b> Un documento PDF con los 10 errores más críticos encontrados en su web y cómo solucionarlos de inmediato.</li>
-            <li><b>Guía de Estilos Accesibles:</b> Un manual breve de consulta rápida para que sus programadores lo usen en futuros proyectos.</li>
+            <li>Reporte "Quick Wins": Un documento PDF con los 10 errores más críticos encontrados en su web y cómo solucionarlos de inmediato.</li>
+            <li>Guía de Estilos Accesibles: Un manual breve de consulta rápida para que sus programadores lo usen en futuros proyectos.</li>
           </ol>
         </article>
         <article>
@@ -463,7 +473,7 @@ main {
     src="https://www.youtube.com/embed/Hl-C46k8r8s?rel=0&controls=1" 
     title="Video demostrativo: Mejora de Accesibilidad Web y cumplimiento WCAG"
     frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    alçlow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
   </iframe>
           </div>
@@ -484,18 +494,18 @@ main {
           <h3>1. ¿Qué es la Inclusión Tecnológica?</h3>
           <p>Es la integración real y efectiva de personas con discapacidad en el entorno laboral y productivo mediante el uso de tecnología.</p>
           <ol type="A">
-            <li><b>Empoderamiento a través del Software:</b> Es el uso de herramientas como lectores de pantalla (NVDA/JAWS) o teclados adaptados que permiten a un profesional con discapacidad visual programar código complejo, gestionar bases de datos o liderar equipos de TI con la misma eficiencia que cualquier otro colega.</li>
-            <li><b>Eliminación de prejuicios en el Talento: Al proporcionar el entorno digital adecuado, las empresas descubren que los desarrolladores con discapacidad suelen tener una capacidad lófica y analítica para la resolución de problemas muy superior a la media.</li>
-            <li><b>IA como Asistente de Productividad:</b> Herramientas de IA ayudan a programadores con discapacidad visual puedan recibir explicaciones visuales de una interfaz de usuario mediante modelos de lenguaje, eliminando las barreras que antes parecían imposibles.</li>
-            <li><b>Estrategia de Innovación Corporativa:</b> Los equipos inclusivos son más creativos porque ven los problemas desde ángulos diferentes, lo que genera productos más innovadores y mejora el clima laboral de toda la organización.</li>
+            <li>Empoderamiento a través del Software: Es el uso de herramientas como lectores de pantalla (NVDA/JAWS) o teclados adaptados que permiten a un profesional con discapacidad visual programar código complejo, gestionar bases de datos o liderar equipos de TI con la misma eficiencia que cualquier otro colega.</li>
+            <li>Eliminación de prejuicios en el Talento: Al proporcionar el entorno digital adecuado, las empresas descubren que los desarrolladores con discapacidad suelen tener una capacidad lófica y analítica para la resolución de problemas muy superior a la media.</li>
+            <li>IA como Asistente de Productividad: Herramientas de IA ayudan a programadores con discapacidad visual puedan recibir explicaciones visuales de una interfaz de usuario mediante modelos de lenguaje, eliminando las barreras que antes parecían imposibles.</li>
+            <li>Estrategia de Innovación Corporativa: Los equipos inclusivos son más creativos porque ven los problemas desde ángulos diferentes, lo que genera productos más innovadores y mejora el clima laboral de toda la organización.</li>
           </ol>
         </article>
         <article>
           <h3>2. ¿Por qué contratar talento tech con discapacidad?</h3>
           <ul>
-            <li>✔️ <b>Alta Capacidad de Abstracción:</b> Los desarrolladores con discapacidad visual suelen desarrollar habilidades lógicas y de memoria superiores para gestionar estructuras de datos complejas.</li>
-            <li>✔️ <b>Mejora del Clima y Retención:</b> Las empresas inclusivas reportan un mayor compromiso de sus colaboradores y una marca empleadora más fuerte.</li>
-            <li>✔️ <b>Beneficios Tributarios en Perú:</b> Deducciones adicionales en el Impuesto a la Renta por la contratación de personas con discapacidad, mejorando la rentabilidad financiera de la empresa.</li>
+            <li>✔️ Alta Capacidad de Abstracción: Los desarrolladores con discapacidad visual suelen desarrollar habilidades lógicas y de memoria superiores para gestionar estructuras de datos complejas.</li>
+            <li>✔️ Mejora del Clima y Retención: Las empresas inclusivas reportan un mayor compromiso de sus colaboradores y una marca empleadora más fuerte.</li>
+            <li>✔️ Beneficios Tributarios en Perú: Deducciones adicionales en el Impuesto a la Renta por la contratación de personas con discapacidad, mejorando la rentabilidad financiera de la empresa.</li>
           </ul>
         </article>
         <article>
@@ -536,18 +546,18 @@ main {
         <article>
           <h3>4. ¿Qué ganará su empresa con este taller?</h3>
           <ul>
-            <li><span>✔️<b> Hoja de Ruta de Contratación:</b> Un paso a paso claro desde la publicación de la vacante hasta el primer día de trabajo.</span></li>
-            <li><span>✔️<b> Adaptación de Procesos:</b> No necesita una remodelación costosa; le enseñamos cómo usar la tecnología que ya tiene para ser inclusivo.</span></li>
-            <li><span>✔️<b> Posicionamiento de Marca:</b> Proyecte una imagen de empresa moderna, humana y alineada con los Objetivos de Desarrollo Sostenible (ODS).</span></li>
+            <li><span>✔️ Hoja de Ruta de Contratación: Un paso a paso claro desde la publicación de la vacante hasta el primer día de trabajo.</span></li>
+            <li><span>✔️ Adaptación de Procesos: No necesita una remodelación costosa; le enseñamos cómo usar la tecnología que ya tiene para ser inclusivo.</span></li>
+            <li><span>✔️ Posicionamiento de Marca: Proyecte una imagen de empresa moderna, humana y alineada con los Objetivos de Desarrollo Sostenible (ODS).</span></li>
           </ul>
         </article>
         <article>
           <h3>5. Entregables Recomendados para este Taller</h3>
           <p>Para que RR.HH. y Gerencia sientan que tienen las herramientas listas para actuar:</p>
           <ol type="A">
-            <li><b>Guía de "Entrevista Técnica Inclusiva":</b> Un checklist para evaluadores sobre cómo realizar pruebas de código accesibles.</li>
-            <li><b>Protocolo de Onboarding:</b> Un documento con los pasos para integrar a un desarrollador con discapacidad visual al equipo técnico en su primera semana.</li>
-            <li><b>Sello de "Empresa Aliada de la Inclusión Tech":</b> Un reconocimiento digital que pueden colocar en su web de "Trabaja con nosotros".</li>
+            <li>Guía de "Entrevista Técnica Inclusiva": Un checklist para evaluadores sobre cómo realizar pruebas de código accesibles.</li>
+            <li>Protocolo de Onboarding: Un documento con los pasos para integrar a un desarrollador con discapacidad visual al equipo técnico en su primera semana.</li>
+            <li>Sello de "Empresa Aliada de la Inclusión Tech": Un reconocimiento digital que pueden colocar en su web de "Trabaja con nosotros".</li>
           </ol>
         </article>
         <article>
@@ -556,8 +566,8 @@ main {
           <div class="video-container">
             <!--<iframe src="https://drive.google.com/file/d/1h11_avBQJIagd8Ih32L4pvsezDRwy7cC/preview" width="640" height="480" allow="autoplay" frameborder="0" allowfullscreen></iframe>-->
   <iframe 
-    src="https://www.youtube.com/embed/Hl-C46k8r8s?rel=0&controls=1" 
-    title="Video demostrativo: Mejora de Accesibilidad Web y cumplimiento WCAG"
+    src="https://www.youtube.com/embed/HnFgyPuCQ3E?rel=0&controls=1" 
+    title="Video de Inclusión Laboral: Programación con lector de pantalla"
     frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
     allowfullscreen>
@@ -577,7 +587,7 @@ main {
           <li>✔️ WhatsApp: <button id="whatsapp" onclick="enviarMensaje()">Agendar Consultoría</button></li>
           <li>✔ 📧: <a href="mailto:tallerdp.appweb@gmail.com?subject=Iniciar%20proceso%20CT&body=%C2%A1Hola%20Ing.%20Brajean%20M%C3%A9ndiz!%0ANos%20gustaría%20iniciar%20el%20proceso%20con%20respecto%20a%20las%20Capacitaciones%20Tecnol%C3%B3gicas.%0AEstaremos%20a%20la%20espera%20de%20su%20comunicaci%C3%B3n..%20%F0%9F%92%BB" target="_blank">tallerdp.appweb@gmail.com</a></li>
           <li>✔ 📱: <a href="tel:992891965">+51 992 891 965</a></li>
-          <li>✔️ <b>Ubicación: </b>Chorrillos, Lima - Perú.</li>
+          <li>✔️ Ubicación: Chorrillos, Lima - Perú.</li>
         </ul>
       </section>
       <article>
