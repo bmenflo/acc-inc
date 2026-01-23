@@ -85,6 +85,12 @@ p, li {
   text-align: justify;          /* justificado */
 }
 
+#accesibilidad ul, #accesibilidad ol, #inclusion ul, #inclusion ol {
+  padding-left: 25px;       /* Suficiente para que se vea el check o el número */
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* Listas: ocultar viñetas */
 ul {
   list-style: none;
@@ -237,6 +243,8 @@ main {
   border: 3px solid #00008b;
   border-radius: 12px;
   padding: 5px;
+  display: block;
+  overflow: hidden;         /* Evita que el contenido se salga del borde redondeado */
 }
 
 /* =========================
